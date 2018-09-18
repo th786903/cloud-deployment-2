@@ -12,7 +12,7 @@ pc = portal.Context()
 request = pc.makeRequestRSpec()
  
 # loop to Add 4 raw PC's
-
+link = request.LAN("lan") #source 8.6
 for i in range(1, 5):
     node = request.XenVM("node-" + str(i)) #creates a node with name node- +the looping counter
     node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:CENTOS7-64-STD" 
